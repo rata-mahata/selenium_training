@@ -24,17 +24,6 @@ public class FirstSeleniumTest {
     }
 
     @Test
-<<<<<<< HEAD
-    public void FirstSeleniumTest () {
-        driver.get("http://localhost/litecart/admin/");
-
-        driver.findElement(By.name("username")).sendKeys("admin", Keys.ENTER);
-        driver.findElement(By.name("password")).sendKeys("admin", Keys.ENTER);
-        driver.findElement(By.name("login")).click();
-
-        //wait.until(titleIs("webdriver - Google Search"));
-
-=======
     public void FirstSeleniumTest () throws InterruptedException {
         driver.get("http://localhost/litecart/admin/");
         Thread.sleep(6000);
@@ -43,7 +32,6 @@ public class FirstSeleniumTest {
         Thread.sleep(6000);
         driver.findElement(By.name("login")).click();
 
->>>>>>> e188fab99b32456eb17db3f8b58d31d46b09037b
     }
 
 
