@@ -24,13 +24,16 @@ public class FirstSeleniumTest {
     }
 
     @Test
-    public void FirstSeleniumTest () {
-        driver.get("http://www.google.com");
+    public void FirstSeleniumTest () throws InterruptedException {
+        driver.get("http://localhost/litecart/admin/");
+        Thread.sleep(6000);
+        driver.findElement(By.name("username")).sendKeys("admin", Keys.ENTER);
+        driver.findElement(By.name("password")).sendKeys("admin", Keys.ENTER);
+        Thread.sleep(6000);
+        driver.findElement(By.name("login")).click();
 
-        driver.findElement(By.name("q")).sendKeys("webdriver", Keys.ENTER );
-
-        wait.until(titleIs("webdriver - Google Search"));
     }
+
 
     @After
     public void stop() {
