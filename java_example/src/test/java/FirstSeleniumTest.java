@@ -25,11 +25,14 @@ public class FirstSeleniumTest {
 
     @Test
     public void FirstSeleniumTest () {
-        driver.get("http://www.google.com");
+        driver.get("http://localhost/litecart/admin/");
 
-        driver.findElement(By.name("q")).sendKeys("webdriver", Keys.ENTER );
+        driver.findElement(By.name("username")).sendKeys("admin", Keys.ENTER);
+        driver.findElement(By.name("password")).sendKeys("admin", Keys.ENTER);
+        driver.findElement(By.name("login")).click();
 
-        wait.until(titleIs("webdriver - Google Search"));
+        //wait.until(titleIs("webdriver - Google Search"));
+
     }
 
     @After
